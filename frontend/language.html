@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Language Assistant | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/language.css">
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main style="margin-top: 80px;" class="container section">
+        <div class="text-center mb-4">
+            <h1>AI Language Assistant 🌐</h1>
+            <p class="text-muted">Learn about AI in your preferred language using NLP.</p>
+        </div>
+        
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="mb-4 text-center">AI LANGUAGE TRANSLATOR</h3>
+                <div class="grid grid-2 mb-4">
+                    <div>
+                        <label for="sourceLang">From</label>
+                        <select id="sourceLang" class="form-control"><option value="en">English</option><option value="kn">ಕನ್ನಡ (Kannada)</option><option value="hi">हिन्दी (Hindi)</option><option value="mr">मराठी (Marathi)</option></select>
+                    </div>
+                    <div>
+                        <label for="targetLang">To</label>
+                        <select id="targetLang" class="form-control">
+                            <option value="en">English</option>
+                            <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                            <option value="hi">हिन्दी (Hindi)</option>
+                            <option value="mr">मराठी (Marathi)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="mb-2">
+                    <label for="inputText">Text to translate</label>
+                    <textarea id="inputText" class="form-control" rows="4" maxlength="2000" placeholder="Type or dictate text to translate..."></textarea>
+                </div>
+                <div class="mb-4" style="display: flex; gap: 1rem;">
+                    <button class="btn btn-outline" id="speakBtn"><i class="fas fa-microphone"></i> Speak</button>
+                    <button class="btn btn-primary" style="flex:1" id="translateBtn">TRANSLATE</button>
+                </div>
+                
+                <div class="mb-2">
+                    <label for="outputText">Translation</label>
+                    <div id="outputText" class="form-control glass language-output" aria-live="polite">Your translation will appear here.</div>
+                </div>
+                <button class="btn btn-secondary" id="listenBtn"><i class="fas fa-volume-up"></i> Listen</button>
+                <p id="translationStatus" class="language-status" role="status" aria-live="polite">Do not enter passwords or private personal information.</p>
+            </div>
+            
+            <div class="card">
+                <h3 class="mb-4 text-center">🤖 Ask in Your Language</h3>
+                <div class="mb-2">
+                    <label for="chatLang">Language</label>
+                    <select id="chatLang" class="form-control">
+                        <option value="mr">मराठी (Marathi)</option>
+                        <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                        <option value="hi">हिन्दी (Hindi)</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label for="chatInput">Ask a website or AI question</label>
+                    <input type="text" id="chatInput" class="form-control" maxlength="1000" placeholder="What is AI?">
+                </div>
+                <button class="btn btn-primary mb-4" id="askBtn" style="width:100%" type="button">ASK AI</button>
+                
+                <div class="mb-2">
+                    <label>AI RESPONSE:</label>
+                    <div id="chatResponse" class="form-control glass language-output" aria-live="polite">The assistant can help with website sections and AI learning topics.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>

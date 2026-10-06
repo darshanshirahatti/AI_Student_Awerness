@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search the Internet | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/search.css">
+    <script src="js/authGuard.js?v=20261006-search-guard"></script>
+</head>
+<body>
+    <main class="container section product-page web-search-page">
+        <section class="web-search-hero">
+            <p class="dashboard-eyebrow">AI-SAKSHARA STUDENT TOOLS</p>
+            <h1>Search the Web</h1>
+            <p>Find information and educational resources online.</p>
+            <form id="webSearchForm" class="web-search-form">
+                <label class="sr-only" for="webSearchInput">Search the internet</label>
+                <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+                <input id="webSearchInput" type="search" maxlength="300" placeholder="Search the internet..." autocomplete="off" required>
+                <label class="sr-only" for="searchProvider">Search provider</label>
+                <select id="searchProvider" aria-label="Search provider">
+                    <option value="google">Google</option>
+                    <option value="bing">Bing</option>
+                    <option value="duckduckgo">DuckDuckGo</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+            <p class="web-search-safety-note"><i class="fas fa-shield-halved" aria-hidden="true"></i> Search safely and responsibly. Do not share passwords, OTPs, bank information, or other private details. Verify important information with trusted sources.</p>
+        </section>
+
+        <section class="suggestion-section" aria-labelledby="suggestionHeading">
+            <div class="section-heading"><div><p class="dashboard-eyebrow">EXPLORE A TOPIC</p><h2 id="suggestionHeading">Suggested searches</h2></div></div>
+            <div id="searchSuggestions" class="search-suggestions">
+                <button type="button" data-query="Artificial Intelligence">Artificial Intelligence</button>
+                <button type="button" data-query="Machine Learning">Machine Learning</button>
+                <button type="button" data-query="Natural Language Processing">Natural Language Processing</button>
+                <button type="button" data-query="Computer Vision">Computer Vision</button>
+                <button type="button" data-query="Generative AI">Generative AI</button>
+                <button type="button" data-query="AI Ethics">AI Ethics</button>
+                <button type="button" data-query="AI Safety">AI Safety</button>
+            </div>
+        </section>
+
+        <section class="recent-search-section" aria-labelledby="recentSearchHeading">
+            <div class="section-heading"><div><p class="dashboard-eyebrow">ON THIS DEVICE</p><h2 id="recentSearchHeading">Recent Searches</h2></div><button id="clearSearchHistory" class="btn btn-outline" type="button">Clear History</button></div>
+            <p id="searchStatus" class="search-status" role="status" aria-live="polite"></p>
+            <ul id="searchHistory" class="search-history"></ul>
+        </section>
+    </main>
+    <script src="js/search.js?v=20261006-search-1"></script>
+</body>
+</html>

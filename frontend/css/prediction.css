@@ -1,0 +1,12 @@
+.prediction-field { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: .5rem 1rem; }
+.prediction-field label { grid-column: 1 / -1; }
+.prediction-field input { min-width: 0; }
+.prediction-field output { min-width: 3.3rem; color: var(--primary); font-weight: 700; text-align: right; }
+.prediction-disclaimer, .prediction-status { color: var(--text-muted); font-size: .82rem; }
+.prediction-disclaimer { margin: .9rem 0 0; }
+.prediction-status { margin: 0 0 1rem; }
+#predictionForm .form-control { border-radius: 7px; }
+#resultCard[hidden] { display: none; }
+#resultCard { align-self: start; }
+#r_recommendation { overflow-wrap: anywhere; }
+@media (max-width:600px) { .circle-progress { width: 150px; height: 150px; border-width: 11px; font-size: 1.5rem; } }

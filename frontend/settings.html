@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/product.css">
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main class="container section product-page settings-page">
+        <header class="mb-4"><p class="dashboard-eyebrow">YOUR PREFERENCES</p><h1>Settings</h1><p class="text-muted">Manage your profile and how AI-Sakshara looks.</p></header>
+        <section class="settings-section"><div><h2>Student profile</h2><p>Account information from your student profile.</p></div><dl class="settings-profile"><div><dt>Name</dt><dd id="settingsName">Loading...</dd></div><div><dt>Email</dt><dd id="settingsEmail">Loading...</dd></div><div><dt>Class</dt><dd id="settingsClass">Not provided</dd></div><div><dt>School</dt><dd id="settingsSchool">Not provided</dd></div></dl></section>
+        <section class="settings-section"><div><h2>Language</h2><p>Choose the language used by translated interface labels.</p></div><label for="settingsLanguage">Interface language</label><select class="form-control settings-select" id="settingsLanguage"><option value="en">English</option><option value="kn">ಕನ್ನಡ (Kannada)</option><option value="hi">हिन्दी (Hindi)</option><option value="mr">मराठी (Marathi)</option></select></section>
+        <section class="settings-section"><div><h2>Appearance</h2><p>Choose a comfortable display theme.</p></div><label for="settingsTheme">Color theme</label><select class="form-control settings-select" id="settingsTheme"><option value="light">Light</option><option value="dark">Dark</option></select></section>
+        <p id="settingsStatus" role="status" aria-live="polite"></p>
+    </main>
+    <script src="js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.education-page .education-tools .card { display: grid; align-content: start; gap: .55rem; }
+.education-tools .card h2 { margin: .25rem 0 0; font-size: 1.1rem; }
+.education-tools .card p { margin: 0; color: var(--text-muted); }
+.education-principle { display: flex; align-items: center; gap: 1rem; margin-top: 1.5rem; padding: 1.2rem 1.4rem; border-left: 4px solid #147f75; background: #eaf7f4; color: #173c4a; }
+.education-principle i { color: #147f75; font-size: 1.3rem; }
+.education-principle p { margin: 0; font-weight: 700; }
+.spot-ai-choice { display: grid; justify-items: start; gap: .35rem; width: 100%; color: var(--text-main); font: inherit; text-align: left; }
+.spot-ai-choice strong { font-size: 1rem; }
+.spot-ai-choice span { color: var(--text-muted); font-size: .82rem; }
+.spot-ai-choice:disabled { cursor: default; }
+.spot-ai-choice.spot-ai-selected { border-color: var(--primary); }
+.spot-ai-feedback { min-height: 1.5rem; margin: 1rem 0 0; color: var(--text-main); }
+[data-theme="dark"] .education-principle { border-color: #5bc8b8; background: #203b3d; color: #e3f4f2; }

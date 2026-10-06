@@ -1,0 +1,13 @@
+.safety-simulator { max-width: 800px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--border-color); }
+.safety-simulator-heading h2 { margin: 0 0 .4rem; font-size: 1.4rem; }
+.safety-simulator-heading p:last-child { color: var(--text-muted); }
+.scenario-panel, .safety-result { padding: 1.25rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--card-bg); }
+.scenario-count { margin: 0 0 .6rem; color: var(--text-muted); font-size: .8rem; font-weight: 700; }
+.scenario-panel h3 { font-size: 1.12rem; }
+.scenario-actions { display: flex; gap: .75rem; margin: 1.2rem 0; }
+.scenario-actions button { min-width: 120px; }
+.scenario-feedback { min-height: 1.5rem; color: var(--text-main); }
+.scenario-actions button:disabled { cursor: default; opacity: .6; }
+#nextScenario[hidden], #safetyResult[hidden] { display: none; }
+.safety-result { border-left: 4px solid #168b7c; font-weight: 700; }
+@media (max-width:520px) { .scenario-actions { flex-direction: column; } .scenario-actions button { width: 100%; } }

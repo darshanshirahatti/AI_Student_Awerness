@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Progress | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/product.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main class="container section product-page">
+        <header class="mb-4"><p class="dashboard-eyebrow">YOUR LEARNING DATA</p><h1>My Progress</h1><p class="text-muted">Track completed lessons and quiz performance over time.</p></header>
+        <p id="progressStatus" role="status" aria-live="polite">Loading your progress...</p>
+        <section class="grid grid-2 progress-charts" aria-label="Learning analytics">
+            <article class="card"><h2>Quiz performance</h2><div class="chart-frame"><canvas id="quizChart" aria-label="Quiz scores over time"></canvas></div></article>
+            <article class="card"><h2>Learning activity</h2><div class="chart-frame"><canvas id="activityChart" aria-label="Quiz attempts over time"></canvas></div></article>
+            <article class="card prediction-chart-card"><h2>AI awareness history</h2><div class="chart-frame"><canvas id="predictionChart" aria-label="AI awareness predictions over time"></canvas></div></article>
+        </section>
+        <section class="progress-summary"><h2>Learning summary</h2><div class="progress-summary-grid"><p><span>Quiz attempts</span><strong id="progressAttempts">--</strong></p><p><span>Best quiz score</span><strong id="progressBest">--</strong></p><p><span>Lesson progress</span><strong id="progressLessons">--</strong></p></div></section>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="js/progress.js"></script>
+</body>
+</html>

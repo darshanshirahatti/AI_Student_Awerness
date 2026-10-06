@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Help | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main class="assistant-page">
+        <div class="assistant-layout">
+            <header class="assistant-heading">
+                <p class="assistant-kicker">AI-Sakshara student guide</p>
+                <h1>What can I help you find?</h1>
+                <p>Ask about lessons, quizzes, your dashboard, languages, or online safety.</p>
+            </header>
+
+            <section class="chat-panel" aria-label="Chat with the student guide">
+                <ol id="chatMessages" class="chat-messages" aria-live="polite" aria-relevant="additions text">
+                    <li class="chat-message assistant-message">
+                        <span class="message-label">Student guide</span>
+                        <p>Hi! I can help you find your way around the website. What would you like to know?</p>
+                    </li>
+                </ol>
+                <form id="chatForm" class="chat-form">
+                    <label for="chatInput">Your question</label>
+                    <div class="chat-input-row">
+                        <textarea id="chatInput" class="form-control" rows="2" maxlength="1000" placeholder="For example: Where can I take the quiz?" required></textarea>
+                        <button id="sendQuestion" class="btn btn-primary" type="submit" aria-label="Send question">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            <span>Send</span>
+                        </button>
+                    </div>
+                    <p id="chatStatus" class="chat-status" role="status"></p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/assistant.js"></script>
+</body>
+</html>

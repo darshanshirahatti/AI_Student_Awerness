@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prediction | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/prediction.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .circle-progress { width: 200px; height: 200px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; margin: 0 auto; border: 15px solid var(--border-color); position: relative; }
+        .level-BEGINNER { border-color: var(--danger); color: var(--danger); }
+        .level-INTERMEDIATE { border-color: var(--accent); color: var(--accent); }
+        .level-ADVANCED { border-color: var(--secondary); color: var(--secondary); }
+        .level-AI-AWARE { border-color: var(--success); color: var(--success); }
+    </style>
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main style="margin-top: 80px;" class="container section">
+        <div class="text-center mb-4">
+            <h1>AI Awareness Prediction</h1>
+            <p class="text-muted">Discover your AI knowledge level using your learning activity and quiz performance.</p>
+        </div>
+        <p id="predictionStatus" class="prediction-status" role="status" aria-live="polite">Using your saved learning data where available.</p>
+        
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="mb-4 text-center">AI AWARENESS PREDICTOR</h3>
+                <form id="predictionForm">
+                    <div class="prediction-field mb-2"><label for="p_quizScore">Quiz score (%)</label><input type="range" id="p_quizScore" min="0" max="100" value="0" class="form-control"><output id="quizScoreOutput">0%</output></div>
+                    <div class="mb-2"><label for="p_lessons">Lessons completed (0-6)</label><input type="number" id="p_lessons" min="0" max="6" value="0" class="form-control"></div>
+                    <div class="mb-2"><label for="p_attempts">Quiz attempts</label><input type="number" id="p_attempts" min="0" value="0" class="form-control"></div>
+                    <div class="prediction-field mb-2"><label for="p_safety">AI safety score (%)</label><input type="range" id="p_safety" min="0" max="100" value="0" class="form-control"><output id="safetyScoreOutput">0%</output></div>
+                    <div class="mb-2"><label for="p_questions">AI questions asked</label><input type="number" id="p_questions" min="0" value="0" class="form-control"></div>
+                    <div class="mb-4"><label for="p_time">Learning time (minutes)</label><input type="number" id="p_time" min="0" value="0" class="form-control"></div>
+                    <button type="submit" class="btn btn-primary" id="predictButton" style="width:100%">Predict my AI level</button>
+                    <p class="prediction-disclaimer">This is a learning estimate based on the information you enter, not a validated AI assessment.</p>
+                </form>
+            </div>
+            
+            <div class="card text-center" id="resultCard" style="display: none;">
+                <h3>🧠 YOUR AI AWARENESS LEVEL</h3>
+                <h2 id="r_level" class="mt-4 mb-2" style="font-size: 2rem;">-</h2>
+                <div class="circle-progress mt-4 mb-4" id="r_circle">
+                    <span id="r_score">0/100</span>
+                </div>
+                <p>Inputs provided: <strong id="r_confidence">-</strong></p>
+                <div class="mt-4 p-2 glass">
+                    <h4>Recommended for you:</h4>
+                    <p id="r_recommendation" class="mt-2">-</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/prediction.js?v=20261006"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Safety & Responsible Use | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/safety.css">
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main style="margin-top: 80px;" class="container section">
+        <div class="text-center mb-4">
+            <h1>AI Safety & Responsible Use</h1>
+        </div>
+        
+<div class="card" style="max-width: 800px; margin: 0 auto;">
+    <h2 class="text-center mb-4"><i class="fas fa-shield-alt text-danger"></i> AI Safety Center</h2>
+    <div class="grid grid-2">
+        <div class="glass p-4" style="border-radius: var(--radius-md);">
+            <h4><i class="fas fa-lock text-primary"></i> Data Privacy</h4>
+            <p class="text-muted mt-2">Never share passwords, OTPs, or bank details with an AI chatbot. They can store your chats!</p>
+        </div>
+        <div class="glass p-4" style="border-radius: var(--radius-md);">
+            <h4><i class="fas fa-search text-secondary"></i> Verification</h4>
+            <p class="text-muted mt-2">Don't blindly believe AI answers. Verify important information using trusted sources like textbooks.</p>
+        </div>
+        <div class="glass p-4" style="border-radius: var(--radius-md);">
+            <h4><i class="fas fa-pencil-alt text-accent"></i> Originality</h4>
+            <p class="text-muted mt-2">Use AI for ideas and grammar, but do not submit AI-generated homework as your own work.</p>
+        </div>
+        <div class="glass p-4" style="border-radius: var(--radius-md);">
+            <h4><i class="fas fa-user-shield text-danger"></i> Ask for Help</h4>
+            <p class="text-muted mt-2">Ask a teacher or parent if something feels unsafe, inappropriate, or weird.</p>
+        </div>
+    </div>
+</div>
+
+<section class="safety-simulator" aria-labelledby="scenarioTitle">
+    <div class="safety-simulator-heading"><p class="dashboard-eyebrow">PRACTICE A SAFE CHOICE</p><h2>Safety scenario</h2><p>Decide what you would do. Your score stays in this session.</p></div>
+    <div id="scenarioPanel" class="scenario-panel">
+        <p id="scenarioCount" class="scenario-count">Scenario 1 of 5</p>
+        <h3 id="scenarioTitle"></h3>
+        <div class="scenario-actions"><button id="safeChoice" class="btn btn-outline" type="button">Safe</button><button id="unsafeChoice" class="btn btn-outline" type="button">Unsafe</button></div>
+        <p id="scenarioFeedback" class="scenario-feedback" role="status" aria-live="polite"></p>
+        <button id="nextScenario" class="btn btn-primary" type="button" hidden>Next scenario</button>
+    </div>
+    <div id="safetyResult" class="safety-result" role="status" aria-live="polite" hidden></div>
+</section>
+
+    </main>
+    <script src="js/theme.js"></script>
+    <script src="js/api.js?v=20261006-2"></script>
+    <script src="js/safety.js?v=20261006-2"></script>
+</body>
+</html>

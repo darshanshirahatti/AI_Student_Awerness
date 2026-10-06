@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | AI Awareness for School Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main style="margin-top: 70px;">
+        
+<section class="dashboard-content">
+    <header class="dashboard-welcome">
+        <div>
+            <p class="dashboard-eyebrow">YOUR LEARNING SPACE</p>
+            <h1 class="mb-2" id="welcomeHeading">Welcome back!</h1>
+            <p class="text-muted">Continue your AI learning journey.</p>
+        </div>
+        <a href="ai-basics.html" class="btn btn-primary"><i class="fas fa-play" aria-hidden="true"></i> Continue learning</a>
+    </header>
+    <p id="dashboardStatus" class="dashboard-status" role="status" aria-live="polite">Loading your progress...</p>
+
+    <section class="dashboard-stats" aria-label="Your learning statistics">
+        <article class="dashboard-stat stat-awareness">
+            <div class="stat-icon"><i class="fas fa-brain" aria-hidden="true"></i></div>
+            <p>AI AWARENESS</p><strong id="awarenessScore">--</strong><span id="awarenessLevel">Waiting for your first quiz</span>
+        </article>
+        <article class="dashboard-stat stat-lessons">
+            <div class="stat-icon"><i class="fas fa-book-open" aria-hidden="true"></i></div>
+            <p>LESSONS</p><strong><span id="lessonsCompleted">--</span><small> / <span id="totalLessons">6</span></small></strong><span>Lessons completed</span>
+        </article>
+        <article class="dashboard-stat stat-quiz">
+            <div class="stat-icon"><i class="fas fa-list-check" aria-hidden="true"></i></div>
+            <p>AVERAGE QUIZ</p><strong id="averageScore">--</strong><span id="quizAttempts">No quiz attempts yet</span>
+        </article>
+        <article class="dashboard-stat stat-safety">
+            <div class="stat-icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
+            <p>AI SAFETY</p><strong id="safetyScore">--</strong><span>Safety simulator score</span>
+        </article>
+    </section>
+
+    <section class="awareness-panel">
+        <div class="awareness-copy">
+            <p class="dashboard-eyebrow">YOUR AI AWARENESS</p>
+            <h2 id="awarenessCardLevel">Start your first quiz</h2>
+            <p id="awarenessRecommendation">Take the AI Awareness Quiz to get a personalized learning snapshot.</p>
+            <a href="prediction.html" class="btn btn-primary">View detailed prediction <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="awareness-score-ring" aria-label="AI awareness score">
+            <strong id="awarenessCardScore">--</strong><span>out of 100</span>
+        </div>
+    </section>
+
+    <section class="student-tools-section">
+        <div class="section-heading"><div><p class="dashboard-eyebrow">STUDY TOOLS</p><h2>Student Tools</h2></div></div>
+        <div class="student-tools-grid">
+            <article class="student-tool-card web-search-card">
+                <span class="student-tool-icon"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></span>
+                <div><h3>Search the Internet</h3><p>Explore educational resources and information online.</p><small>Search the web safely and responsibly.</small></div>
+                <a href="search.html" class="btn btn-primary">Search the Web <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </article>
+            <article class="student-tool-card"><span class="student-tool-icon"><i class="fas fa-message" aria-hidden="true"></i></span><div><h3>AI Learning Assistant</h3><p>Ask AI questions and learn interactively.</p></div><a href="ai-assistant.html" class="btn btn-outline">Ask AI</a></article>
+            <article class="student-tool-card"><span class="student-tool-icon"><i class="fas fa-globe" aria-hidden="true"></i></span><div><h3>Language AI</h3><p>Translate and learn AI in multiple languages.</p></div><a href="language.html" class="btn btn-outline">Open Language AI</a></article>
+            <article class="student-tool-card"><span class="student-tool-icon"><i class="fas fa-brain" aria-hidden="true"></i></span><div><h3>AI Prediction</h3><p>Discover your current AI awareness level.</p></div><a href="prediction.html" class="btn btn-outline">Check My Level</a></article>
+        </div>
+    </section>
+
+    <div class="dashboard-lower-grid">
+        <section class="dashboard-section">
+            <div class="section-heading"><div><p class="dashboard-eyebrow">NEXT STEPS</p><h2>Your learning journey</h2></div><span id="journeyCount">0 / 6</span></div>
+            <div class="journey-track"><span id="journeyProgress"></span></div>
+            <ol class="journey-list">
+                <li><i class="fas fa-robot" aria-hidden="true"></i><a href="ai-basics.html">AI Basics</a></li>
+                <li><i class="fas fa-comments" aria-hidden="true"></i><a href="communication.html">AI & Communication</a></li>
+                <li><i class="fas fa-rocket" aria-hidden="true"></i><a href="technologies.html">AI Technologies</a></li>
+                <li><i class="fas fa-book-open" aria-hidden="true"></i><a href="education.html">AI in Education</a></li>
+                <li><i class="fas fa-shield-halved" aria-hidden="true"></i><a href="safety.html">AI Safety</a></li>
+                <li><i class="fas fa-list-check" aria-hidden="true"></i><a href="quiz.html">AI Quiz</a></li>
+            </ol>
+        </section>
+
+        <section class="dashboard-section">
+            <div class="section-heading"><div><p class="dashboard-eyebrow">PICK UP A TOPIC</p><h2>Continue learning</h2></div></div>
+            <div class="continue-links">
+                <a href="ai-basics.html"><i class="fas fa-robot" aria-hidden="true"></i><span><strong>AI Basics</strong><small>Understand the foundations</small></span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="technologies.html"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i><span><strong>AI Technologies</strong><small>Explore tools and examples</small></span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="safety.html"><i class="fas fa-shield-halved" aria-hidden="true"></i><span><strong>AI Safety</strong><small>Make thoughtful choices</small></span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="assistant.html"><i class="fas fa-message" aria-hidden="true"></i><span><strong>Learning assistant</strong><small>Ask a site-related question</small></span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <section class="dashboard-section recent-section">
+        <div class="section-heading"><div><p class="dashboard-eyebrow">YOUR ACTIVITY</p><h2>Recent quiz results</h2></div><a href="progress.html">View progress <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+        <ul id="recentActivity" class="recent-activity"><li class="empty-activity">Your quiz results will appear here after your first attempt.</li></ul>
+    </section>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="logo mb-2" style="justify-content: center;">🤖 AI Awareness for School Students</div>
+            <p class="text-muted">Use AI to learn better, think better, and communicate better — not to stop thinking.</p>
+            <div class="mt-4">
+                <p>&copy; 2026 AI Awareness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js?v=20261006-2"></script>
+</body>
+</html>

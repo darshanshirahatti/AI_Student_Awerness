@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css?v=20261006">
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body class="auth-page auth-entry-page register-page">
+    <main class="auth-layout register-layout">
+        <section class="auth-story register-story" aria-label="About AI-Sakshara">
+            <a href="login.html" class="auth-brand"><i class="fas fa-robot" aria-hidden="true"></i> AI-Sakshara</a>
+            <div class="auth-story-copy">
+                <p class="auth-eyebrow">Your next discovery starts here</p>
+                <h1>Curiosity is your<br><span>superpower.</span></h1>
+                <p>Build your understanding of AI, one thoughtful question at a time. Learn at your pace and use technology with confidence.</p>
+            </div>
+            <div class="register-values">
+                <span><i class="fas fa-lightbulb"></i> Learn by exploring</span>
+                <span><i class="fas fa-shield-alt"></i> Think responsibly</span>
+                <span><i class="fas fa-globe"></i> Learn in your language</span>
+            </div>
+        </section>
+        <section class="auth-panel register-panel">
+            <button id="themeToggle" class="theme-toggle auth-theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            <div class="auth-form-card register-form-card">
+                <p class="auth-eyebrow">NEW STUDENT</p>
+                <h2>Create Your Student Account <span aria-hidden="true">🎓</span></h2>
+                <p class="auth-subtitle">A few details, then you're ready to learn.</p>
+                <div id="successMessage" class="auth-message auth-success" role="status" hidden></div>
+                <div id="errorMessage" class="auth-message auth-error" role="alert" aria-live="polite" hidden></div>
+
+                <form id="registerForm">
+                    <div class="form-group auth-field">
+                        <label class="form-label" for="name">Full name</label>
+                        <input type="text" id="name" class="form-control" required autocomplete="name" maxlength="80" placeholder="Your name">
+                    </div>
+                    <div class="form-group auth-field">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required autocomplete="email" placeholder="student@school.com">
+                    </div>
+                    <div class="register-fields-grid">
+                        <div class="form-group auth-field">
+                            <label class="form-label" for="password">Password</label>
+                            <div class="password-field">
+                                <input type="password" id="password" class="form-control" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters">
+                                <button type="button" class="password-toggle" data-password-target="password" aria-label="Show password"><i class="fas fa-eye" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group auth-field">
+                            <label class="form-label" for="confirmPassword">Confirm password</label>
+                            <div class="password-field">
+                                <input type="password" id="confirmPassword" class="form-control" required minlength="8" autocomplete="new-password" placeholder="Re-enter password">
+                                <button type="button" class="password-toggle" data-password-target="confirmPassword" aria-label="Show password"><i class="fas fa-eye" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group auth-field">
+                            <label class="form-label" for="className">Class</label>
+                            <input type="text" id="className" class="form-control" maxlength="40" placeholder="e.g. Grade 10">
+                        </div>
+                        <div class="form-group auth-field">
+                            <label class="form-label" for="schoolName">School name</label>
+                            <input type="text" id="schoolName" class="form-control" maxlength="100" placeholder="Your school">
+                        </div>
+                    </div>
+                    <label class="responsible-option"><input type="checkbox" id="responsibleUse" required> <span>I agree to use the platform responsibly.</span></label>
+                    <button type="submit" class="btn btn-primary auth-submit">Create Account</button>
+                </form>
+                <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="js/theme.js?v=20261006"></script>
+    <script src="js/api.js?v=20261006"></script>
+    <script src="js/auth.js?v=20261006-auth-2"></script>
+</body>
+</html>

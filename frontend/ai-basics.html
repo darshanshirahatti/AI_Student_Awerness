@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Basics | AI Awareness for School Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main style="margin-top: 70px;">
+        
+<section class="section">
+    <div class="container">
+        <h1 class="text-center mb-4 animate-slide-up">What is Artificial Intelligence?</h1>
+        <div class="card mb-4 text-center animate-slide-up delay-100" style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.25rem;"><strong>Artificial Intelligence (AI)</strong> is a technology that enables computers to perform tasks that normally require human intelligence.</p>
+        </div>
+        
+        <h2 class="mt-4 mb-4 text-center reveal">How AI Works</h2>
+        <div class="grid grid-3 reveal delay-200">
+            <div class="card">
+                <i class="fas fa-database mb-2" style="font-size: 2rem; color: var(--primary);"></i>
+                <h3>Learning from Data</h3>
+                <p>AI looks at millions of examples to learn how things work.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-brain mb-2" style="font-size: 2rem; color: var(--secondary);"></i>
+                <h3>Pattern Recognition</h3>
+                <p>It spots patterns, like recognizing a cat in a photo.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line mb-2" style="font-size: 2rem; color: var(--accent);"></i>
+                <h3>Predictions</h3>
+                <p>It uses patterns to guess what might happen next.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-language mb-2" style="font-size: 2rem; color: var(--success);"></i>
+                <h3>Language Understanding</h3>
+                <p>It learns to read, write, and speak human languages.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-image mb-2" style="font-size: 2rem; color: var(--danger);"></i>
+                <h3>Image Recognition</h3>
+                <p>It can "see" and understand what is in a picture.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-magic mb-2" style="font-size: 2rem; color: var(--primary);"></i>
+                <h3>Content Generation</h3>
+                <p>It can create new text, images, or music based on what it learned.</p>
+            </div>
+        </div>
+        
+        <div class="mt-4 p-4 card text-center glass reveal">
+            <h2>Interactive: Can You Spot AI?</h2>
+            <p>Which of these uses Artificial Intelligence?</p>
+            <div class="grid grid-2 mt-4" id="spotAiChoices">
+                <button class="card spot-ai-choice" type="button" data-answer="ai"><i class="fas fa-face-smile mb-2" aria-hidden="true"></i><strong>Unlocking a phone with Face ID</strong><span>Select this example</span></button>
+                <button class="card spot-ai-choice" type="button" data-answer="not-ai"><i class="fas fa-calculator mb-2" aria-hidden="true"></i><strong>Using a basic pocket calculator</strong><span>Select this example</span></button>
+            </div>
+            <p id="spotAiFeedback" class="spot-ai-feedback" role="status" aria-live="polite">Choose an example to see why it does or does not use AI.</p>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="logo mb-2" style="justify-content: center;">🤖 AI Awareness for School Students</div>
+            <p class="text-muted">Use AI to learn better, think better, and communicate better — not to stop thinking.</p>
+            <div class="mt-4">
+                <p>&copy; 2026 AI Awareness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ai-basics.js"></script>
+    <script src="js/ai-basics.js"></script>
+</body>
+</html>

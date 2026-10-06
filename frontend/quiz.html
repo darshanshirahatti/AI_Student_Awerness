@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main class="container section quiz-page">
+        <header class="quiz-heading"><p class="dashboard-eyebrow">CHECK YOUR UNDERSTANDING</p><h1>AI Awareness Quiz</h1><p class="text-muted">Ten questions about AI, responsible use, and online safety.</p></header>
+        <p id="quizStatus" class="quiz-status" role="status" aria-live="polite">Loading quiz questions...</p>
+        <section id="quizPanel" class="quiz-panel" hidden>
+            <div class="quiz-meta"><span id="questionCounter">Question 1 of 10</span><span id="quizTimer">15:00</span></div>
+            <div class="quiz-progress-track"><span id="quizProgress"></span></div>
+            <nav id="questionNav" class="question-nav" aria-label="Question navigation"></nav>
+            <article class="quiz-question-card">
+                <p id="questionCategory" class="dashboard-eyebrow"></p>
+                <h2 id="questionText"></h2>
+                <div id="answerOptions" class="answer-options"></div>
+            </article>
+            <div class="quiz-controls"><button id="previousQuestion" class="btn btn-outline" type="button">Previous</button><button id="nextQuestion" class="btn btn-primary" type="button">Next question</button><button id="finishQuiz" class="btn btn-primary" type="button" hidden>Finish quiz</button></div>
+        </section>
+        <section id="quizResult" class="quiz-result" hidden>
+            <p class="dashboard-eyebrow">YOUR RESULT</p><h2 id="resultTitle">Quiz complete</h2><p id="resultScore" class="result-score"></p><p id="resultSummary"></p><p id="resultGrade" class="result-grade"></p><p id="resultPersistence" class="quiz-status"></p>
+            <div id="answerReview" class="answer-review"></div>
+            <div class="quiz-controls"><button id="retryQuiz" class="btn btn-outline" type="button">Retry quiz</button><a href="prediction.html" class="btn btn-primary">Check my AI awareness</a><a href="certificates.html" class="btn btn-secondary">My certificates</a></div>
+        </section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/quiz.js?v=20261006-cert"></script>
+</body>
+</html>

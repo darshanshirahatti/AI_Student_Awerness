@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Sakshara | AI Awareness for School Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <style>body { visibility: hidden; }</style>
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+    <style>
+        /* Search Modal Styles */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(5px); }
+        .modal-content { background-color: var(--card-bg); margin: 10% auto; padding: 2rem; border-radius: var(--radius-lg); width: 90%; max-width: 600px; box-shadow: var(--shadow-lg); position: relative; }
+        .close-modal { color: var(--text-muted); float: right; font-size: 1.5rem; font-weight: bold; cursor: pointer; }
+        .close-modal:hover { color: var(--danger); }
+        .search-box { display: flex; gap: 1rem; margin-top: 1rem; }
+        .search-result { margin-top: 1.5rem; padding: 1rem; border-radius: var(--radius-md); background: var(--bg-color); border: 1px solid var(--border-color); display: none; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">🤖 AI-Sakshara</a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" data-i18n="nav_home">Home</a>
+                <a href="ai-basics.html" data-i18n="nav_ai_basics">AI Basics</a>
+                <a href="prediction.html" data-i18n="nav_prediction">AI Prediction</a>
+                <a href="language.html" data-i18n="nav_language">Language AI</a>
+                <a href="quiz.html" data-i18n="nav_quiz">Quiz</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="nav-actions">
+                <select id="languageSelector" class="form-control" style="width: auto; padding: 0.25rem;">
+                    <option value="en">🌐 English</option>
+                    <option value="kn">ಕನ್ನಡ Kannada</option>
+                    <option value="hi">हिन्दी Hindi</option>
+                    <option value="mr">मराठी Marathi</option>
+                </select>
+                <button id="themeToggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <main style="margin-top: 80px;">
+        <section class="section text-center">
+            <div class="container">
+                <h1 class="mb-4" data-i18n="hero_title">Learn AI. Understand AI. Predict Your Progress.</h1>
+                <p class="mb-4 text-muted" style="max-width: 800px; margin: 0 auto; font-size: 1.25rem;" data-i18n="hero_sub">
+                    An interactive AI awareness platform that helps school students learn Artificial Intelligence, explore NLP, communicate in multiple languages, and understand their AI awareness level.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+                    <a href="ai-basics.html" class="btn btn-primary" data-i18n="start_learning">START LEARNING</a>
+                    <a href="prediction.html" class="btn btn-secondary" data-i18n="check_level">CHECK MY AI LEVEL</a>
+                </div>
+            </div>
+        </section>
+
+        
+
+
+        <section class="section">
+            <div class="container grid grid-3">
+                <div class="card text-center" style="cursor: pointer;" onclick="openSearchModal()">
+                    <i class="fas fa-search mb-2 fa-2x text-primary"></i>
+                    <h3>Smart AI Search</h3>
+                    <p>Click here to ask your doubts and get smart AI answers!</p>
+                </div>
+                <div class="card text-center"><i class="fas fa-brain mb-2 fa-2x text-secondary"></i><h3>🧠 AI Prediction</h3><p>Discover your AI awareness level.</p></div>
+                <a href="nlp-learning.html" style="text-decoration: none; color: inherit;"><div class="card text-center" style="cursor: pointer;"><i class="fas fa-language mb-2 fa-2x text-accent"></i><h3>🌐 NLP Language AI</h3><p>Learn what NLP is and how it works.</p></div></a>
+                <a href="assistant.html" class="card text-center assistant-card"><i class="fas fa-comments mb-2 fa-2x text-success" aria-hidden="true"></i><h3>💬 AI Assistant</h3><p>Ask for help finding your way around AI-Sakshara.</p></a>
+                <div class="card text-center"><i class="fas fa-shield-alt mb-2 fa-2x text-danger"></i><h3>🛡️ AI Safety</h3><p>Learn how to use AI responsibly.</p></div>
+                <div class="card text-center"><i class="fas fa-trophy mb-2 fa-2x text-primary"></i><h3>🏆 AI Quiz</h3><p>Test your knowledge and earn a certificate.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeSearchModal()">&times;</span>
+            <h2 class="mb-2"><i class="fas fa-search text-primary"></i> Ask AI a Question</h2>
+            <p class="text-muted">Type your doubt below, and our educational AI will explain it simply.</p>
+            <div class="search-box">
+                <input type="text" id="aiSearchInput" class="form-control" placeholder="E.g., What is Machine Learning?">
+                <button class="btn btn-primary" onclick="performAISearch()" id="searchBtn">Ask AI</button>
+            </div>
+            <div id="aiSearchResult" class="search-result"></div>
+        </div>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/language-core.js"></script>
+    <script>
+        function openSearchModal() { document.getElementById('searchModal').style.display = 'block'; }
+        function closeSearchModal() { document.getElementById('searchModal').style.display = 'none'; }
+        
+        async function performAISearch() {
+            const query = document.getElementById('aiSearchInput').value;
+            if(!query) return;
+            
+            const btn = document.getElementById('searchBtn');
+            const resBox = document.getElementById('aiSearchResult');
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Searching...';
+            btn.disabled = true;
+            resBox.style.display = 'block';
+            resBox.innerHTML = 'Thinking...';
+            
+            try {
+                // In production, this hits our backend /api/ai/ask which queries Gemini/OpenAI
+                // Using timeout here to simulate network for the visual flow
+                await new Promise(r => setTimeout(r, 1500)); 
+                
+                // Mock smart answer - will be replaced by actual API data when connected to AI provider
+                const answer = `<strong>AI Answer:</strong><br><br>Here is a simple explanation for your question: <em>"${query}"</em>.<br><br>Artificial Intelligence uses patterns and data to learn how to solve problems, just like how you learn from reading books! Always remember to verify important facts.`;
+                
+                resBox.innerHTML = answer;
+            } catch(e) {
+                resBox.innerHTML = '<span style="color:red">Failed to connect to AI. Please try again.</span>';
+            } finally {
+                btn.innerHTML = 'Ask AI';
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

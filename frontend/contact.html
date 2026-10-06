@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main style="margin-top: 80px;" class="container section">
+        <div class="text-center mb-4">
+            <h1>Contact Us & Support</h1>
+        </div>
+        
+        <div class="grid grid-2">
+            <div class="card">
+                <h3><i class="fas fa-headset text-primary"></i> Get in Touch</h3>
+                <p class="text-muted mt-2 mb-4">Facing difficulties or have questions? Contact the platform admin directly.</p>
+                
+                <div class="mb-4" style="background: var(--bg-color); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <span style="font-size: 2rem;">📧</span>
+                        <div>
+                            <p style="font-weight: 600; margin: 0;">Email Admin</p>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=swatipatole7204@gmail.com" target="_blank" style="color: var(--primary); font-weight: 500;">swatipatole7204@gmail.com</a>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <span style="font-size: 2rem;">💬</span>
+                        <div>
+                            <p style="font-weight: 600; margin: 0;">WhatsApp Chat</p>
+                            <!-- Uses wa.me to open WhatsApp chat directly -->
+                            <a href="https://wa.me/919865312005" target="_blank" style="color: var(--success); font-weight: 500;">+91 98653 12005</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr style="border: none; border-top: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+                
+                <h4>Send a quick message</h4>
+                <form class="mt-4">
+                    <div class="mb-2"><label>Name</label><input type="text" class="form-control" placeholder="Your name"></div>
+                    <div class="mb-2"><label>Email</label><input type="email" class="form-control" placeholder="student@school.com"></div>
+                    <div class="mb-4"><label>Message</label><textarea class="form-control" rows="4"></textarea></div>
+                    <button type="button" class="btn btn-primary" onclick="alert('Message Sent!')" style="width: 100%;">SEND MESSAGE</button>
+                </form>
+            </div>
+            
+            <div class="card text-center" style="display:flex; flex-direction:column; justify-content:center; background: var(--primary); color: white;">
+                <i class="fas fa-quote-left fa-3x mb-4 opacity-50"></i>
+                <h2 style="line-height: 1.5;">"Use AI to learn better, think better, and communicate better — not to stop thinking."</h2>
+            </div>
+        </div>
+    </main>
+    <script src="js/theme.js"></script>
+</body>
+</html>

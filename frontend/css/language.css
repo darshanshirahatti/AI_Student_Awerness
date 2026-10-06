@@ -1,0 +1,5 @@
+.language-output { min-height: 110px; padding: 1rem; overflow-wrap: anywhere; white-space: pre-wrap; }
+.language-status { min-height: 1.3rem; margin: .7rem 0 0; color: var(--text-muted); font-size: .82rem; }
+#translateBtn:disabled, #askBtn:disabled, #speakBtn:disabled { cursor: wait; opacity: .7; }
+#listenBtn { gap: .5rem; }
+@media (max-width:680px) { .language-page-grid, .grid.grid-2 { grid-template-columns: 1fr; } }

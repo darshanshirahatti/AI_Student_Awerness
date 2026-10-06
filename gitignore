@@ -1,0 +1,65 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ---------- Virtual environments ----------
+venv/
+.venv/
+env/
+ENV/
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+
+# ---------- Environment & secrets ----------
+.env
+.env.*
+*.key
+*.pem
+secrets.json
+
+# ---------- Data & models (large files) ----------
+data/raw/
+*.csv.gz
+*.h5
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.zip
+*.tar.gz
+
+# ---------- Node (if used) ----------
+node_modules/
+
+# ---------- Logs & temp ----------
+*.log
+*.tmp
+*.bak
+*.swp
+tmp/
+
+# ---------- IDE / Editor ----------
+.vscode/
+.idea/
+*.code-workspace
+
+# ---------- OS files ----------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | AI-Sakshara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/certificate.css">
+    <script src="js/authGuard.js?v=20261006-shell-4"></script>
+</head>
+<body>
+    <main class="container section product-page certificates-page">
+        <header class="certificate-page-heading"><div><p class="dashboard-eyebrow">YOUR ACHIEVEMENTS</p><h1>My Certificates <span aria-hidden="true">🏆</span></h1><p class="text-muted">Your verified AI Awareness accomplishments.</p></div><a href="quiz.html" class="btn btn-primary no-print">Take AI Awareness Quiz</a></header>
+        <p id="certificateStatus" role="status" aria-live="polite">Loading your certificates...</p>
+        <section id="certificateEmpty" class="certificate-empty" hidden>
+            <i class="fas fa-award" aria-hidden="true"></i>
+            <h2>No certificate earned yet.</h2>
+            <p>Score at least 60% on the AI Awareness Quiz to qualify.</p>
+            <a href="quiz.html" class="btn btn-primary">Take AI Awareness Quiz</a>
+        </section>
+        <div id="certificateList" class="certificate-list"></div>
+        <section id="certificatePreview" class="certificate-preview" hidden>
+            <article id="certificatePaper" class="certificate-paper">
+                <div class="certificate-frame">
+                    <div class="certificate-brand"><i class="fas fa-robot" aria-hidden="true"></i><span>AI-SAKSHARA</span></div>
+                    <p class="certificate-platform">AI Awareness &amp; Digital Intelligence Platform</p>
+                    <div class="certificate-divider"><span></span><i class="fas fa-star" aria-hidden="true"></i><span></span></div>
+                    <h2>CERTIFICATE OF AI AWARENESS</h2>
+                    <p class="certificate-presented">This certificate is proudly presented to</p>
+                    <h1 id="certificateStudentName"></h1>
+                    <p class="certificate-description">For successfully completing the AI Awareness Quiz and demonstrating knowledge of Artificial Intelligence, AI technologies, responsible AI usage, and AI safety.</p>
+                    <div class="certificate-award-data">
+                        <div><span>SCORE</span><strong id="certificateScore"></strong></div>
+                        <div><span>GRADE</span><strong id="certificateGrade"></strong></div>
+                        <div><span>DATE</span><strong id="certificateDate"></strong></div>
+                    </div>
+                    <div class="certificate-footer">
+                        <div class="certificate-signature"><span></span><strong>Quiz Coordinator</strong><small>AI-Sakshara</small></div>
+                        <div class="certificate-seal"><i class="fas fa-award" aria-hidden="true"></i><span>VERIFIED<br>ACHIEVEMENT</span></div>
+                        <div class="certificate-qr-block"><img id="certificateQr" alt="QR code for certificate verification"><span id="certificateId"></span></div>
+                    </div>
+                    <p class="certificate-issued-by">Issued by AI-Sakshara · AI Awareness &amp; Digital Intelligence Platform</p>
+                </div>
+            </article>
+            <div class="certificate-actions no-print">
+                <button id="downloadCertificate" class="btn btn-primary" type="button"><i class="fas fa-download" aria-hidden="true"></i> Download Certificate</button>
+                <button id="printCertificate" class="btn btn-outline" type="button"><i class="fas fa-print" aria-hidden="true"></i> Print Certificate</button>
+                <a id="verifyCertificate" class="btn btn-outline" target="_blank" rel="noopener noreferrer"><i class="fas fa-shield-check" aria-hidden="true"></i> Verify Certificate</a>
+            </div>
+            <p id="certificateActionStatus" class="certificate-action-status no-print" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+    <script src="js/api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="js/certificate.js?v=20261006-cert-2"></script>
+</body>
+</html>
